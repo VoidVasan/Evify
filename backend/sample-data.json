@@ -1,0 +1,300 @@
+{
+  "categories": [
+    {
+      "id": "cat_competitions",
+      "name": "Competitions",
+      "slug": "competitions",
+      "description": "Academic and skill-based competitions",
+      "icon": "🏆",
+      "color": "#F59E0B",
+      "order": 1,
+      "eventCount": 0,
+      "isActive": true
+    },
+    {
+      "id": "cat_festivals",
+      "name": "Festivals",
+      "slug": "festivals",
+      "description": "Cultural and celebration events",
+      "icon": "🎉",
+      "color": "#EC4899",
+      "order": 2,
+      "eventCount": 0,
+      "isActive": true
+    },
+    {
+      "id": "cat_workshops",
+      "name": "Workshops",
+      "slug": "workshops",
+      "description": "Educational workshops and seminars",
+      "icon": "🎓",
+      "color": "#8B5CF6",
+      "order": 3,
+      "eventCount": 0,
+      "isActive": true
+    },
+    {
+      "id": "cat_hackathons",
+      "name": "Hackathons",
+      "slug": "hackathons",
+      "description": "Coding competitions and tech events",
+      "icon": "💻",
+      "color": "#10B981",
+      "order": 4,
+      "eventCount": 0,
+      "isActive": true
+    }
+  ],
+  
+  "events": [
+    {
+      "id": "evt_001",
+      "title": "International Science Olympiad 2025",
+      "description": "Join the most prestigious science competition for high school students worldwide. The International Science Olympiad brings together brilliant young minds from over 80 countries to compete in challenging scientific problems across physics, chemistry, biology, and astronomy.",
+      "shortDescription": "Prestigious global science competition for students aged 15-18",
+      "categoryId": "cat_competitions",
+      "categoryName": "Competition",
+      "location": {
+        "venue": "Singapore Science Centre",
+        "city": "Singapore",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.3334,
+          "lng": 103.7371
+        },
+        "isOnline": false
+      },
+      "dates": {
+        "registrationDeadline": "2024-12-15T23:59:59Z",
+        "startDate": "2025-01-20T09:00:00Z",
+        "endDate": "2025-01-25T18:00:00Z"
+      },
+      "bannerImage": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1200&h=400&fit=crop",
+      "images": [],
+      "organizer": {
+        "name": "International Science Foundation",
+        "email": "info@scienceolympiad.org",
+        "website": "https://scienceolympiad.org",
+        "contact": "+65 6425 2500"
+      },
+      "eligibility": {
+        "ageMin": 15,
+        "ageMax": 18,
+        "restrictions": "High school students only"
+      },
+      "registration": {
+        "fee": 0,
+        "currency": "USD",
+        "isFree": true,
+        "link": "https://scienceolympiad.org/register",
+        "maxParticipants": 500,
+        "currentParticipants": 342
+      },
+      "prizes": "$100,000 in total prizes including scholarships",
+      "tags": ["Science", "Competition", "International", "STEM", "Olympiad"],
+      "status": "upcoming",
+      "featured": true,
+      "viewCount": 1520,
+      "bookmarkCount": 287
+    },
+    {
+      "id": "evt_002",
+      "title": "Global Youth Hackathon 2025",
+      "description": "24-hour coding marathon where students build innovative solutions to real-world problems. Mentorship from industry experts, workshops, and networking opportunities included.",
+      "shortDescription": "Build innovative tech solutions in 24 hours",
+      "categoryId": "cat_hackathons",
+      "categoryName": "Hackathon",
+      "location": {
+        "venue": "Online",
+        "city": "Virtual",
+        "country": "Global",
+        "coordinates": null,
+        "isOnline": true
+      },
+      "dates": {
+        "registrationDeadline": "2025-01-15T23:59:59Z",
+        "startDate": "2025-01-20T00:00:00Z",
+        "endDate": "2025-01-21T00:00:00Z"
+      },
+      "bannerImage": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=400&fit=crop",
+      "images": [],
+      "organizer": {
+        "name": "Tech4Youth Foundation",
+        "email": "hello@tech4youth.org",
+        "website": "https://globalyouthhack.com",
+        "contact": "+1 555 0123"
+      },
+      "eligibility": {
+        "ageMin": 13,
+        "ageMax": 18,
+        "restrictions": "Students aged 13-18, all skill levels welcome"
+      },
+      "registration": {
+        "fee": 0,
+        "currency": "USD",
+        "isFree": true,
+        "link": "https://globalyouthhack.com/register",
+        "maxParticipants": 1000,
+        "currentParticipants": 756
+      },
+      "prizes": "$50,000 in cash prizes and internship opportunities",
+      "tags": ["Hackathon", "Coding", "Technology", "Innovation", "Online"],
+      "status": "upcoming",
+      "featured": true,
+      "viewCount": 2340,
+      "bookmarkCount": 512
+    },
+    {
+      "id": "evt_003",
+      "title": "Creative Writing Workshop Series",
+      "description": "4-week intensive workshop covering fiction, poetry, and creative non-fiction. Led by award-winning authors and published writers.",
+      "shortDescription": "Master creative writing with expert guidance",
+      "categoryId": "cat_workshops",
+      "categoryName": "Workshop",
+      "location": {
+        "venue": "Arts Center Downtown",
+        "city": "New York",
+        "country": "USA",
+        "coordinates": {
+          "lat": 40.7128,
+          "lng": -74.0060
+        },
+        "isOnline": false
+      },
+      "dates": {
+        "registrationDeadline": "2024-12-20T23:59:59Z",
+        "startDate": "2025-01-10T14:00:00Z",
+        "endDate": "2025-02-07T17:00:00Z"
+      },
+      "bannerImage": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&h=400&fit=crop",
+      "images": [],
+      "organizer": {
+        "name": "Young Writers Guild",
+        "email": "contact@youngwriters.org",
+        "website": "https://youngwriters.org",
+        "contact": "+1 212 555 0199"
+      },
+      "eligibility": {
+        "ageMin": 14,
+        "ageMax": 18,
+        "restrictions": "Intermediate writing level recommended"
+      },
+      "registration": {
+        "fee": 150,
+        "currency": "USD",
+        "isFree": false,
+        "link": "https://youngwriters.org/workshops",
+        "maxParticipants": 30,
+        "currentParticipants": 22
+      },
+      "prizes": "Certificate of completion, publication opportunities",
+      "tags": ["Writing", "Workshop", "Arts", "Literature", "Creative"],
+      "status": "upcoming",
+      "featured": false,
+      "viewCount": 680,
+      "bookmarkCount": 145
+    },
+    {
+      "id": "evt_004",
+      "title": "Spring Music Festival 2025",
+      "description": "Annual celebration of student musical talent featuring performances, competitions, and masterclasses with renowned musicians.",
+      "shortDescription": "Showcase your musical talent at this vibrant festival",
+      "categoryId": "cat_festivals",
+      "categoryName": "Festival",
+      "location": {
+        "venue": "National Concert Hall",
+        "city": "London",
+        "country": "UK",
+        "coordinates": {
+          "lat": 51.5074,
+          "lng": -0.1278
+        },
+        "isOnline": false
+      },
+      "dates": {
+        "registrationDeadline": "2025-02-01T23:59:59Z",
+        "startDate": "2025-03-15T10:00:00Z",
+        "endDate": "2025-03-17T22:00:00Z"
+      },
+      "bannerImage": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=1200&h=400&fit=crop",
+      "images": [],
+      "organizer": {
+        "name": "Youth Music Alliance",
+        "email": "info@youthmusicalliance.org",
+        "website": "https://springmusicfest.com",
+        "contact": "+44 20 7946 0958"
+      },
+      "eligibility": {
+        "ageMin": 13,
+        "ageMax": 18,
+        "restrictions": "All instruments and vocal performers welcome"
+      },
+      "registration": {
+        "fee": 75,
+        "currency": "GBP",
+        "isFree": false,
+        "link": "https://springmusicfest.com/register",
+        "maxParticipants": 200,
+        "currentParticipants": 134
+      },
+      "prizes": "Performance opportunities, scholarships, instrument prizes",
+      "tags": ["Music", "Festival", "Performance", "Arts", "Competition"],
+      "status": "upcoming",
+      "featured": true,
+      "viewCount": 1890,
+      "bookmarkCount": 423
+    }
+  ],
+  
+  "users": [
+    {
+      "id": "user_demo",
+      "email": "demo@evify.com",
+      "name": "Demo User",
+      "displayName": "Demo",
+      "avatar": null,
+      "age": 16,
+      "school": "Example High School",
+      "interests": ["cat_competitions", "cat_hackathons"],
+      "location": {
+        "city": "San Francisco",
+        "country": "USA"
+      },
+      "preferences": {
+        "emailNotifications": true,
+        "reminders": true,
+        "newsletter": false
+      },
+      "stats": {
+        "eventsAttended": 5,
+        "eventsSaved": 8,
+        "eventsRegistered": 3
+      },
+      "role": "student",
+      "isVerified": true
+    }
+  ],
+  
+  "saved_events": [
+    {
+      "id": "saved_001",
+      "userId": "user_demo",
+      "eventId": "evt_001",
+      "notes": "Interested in physics competition",
+      "reminder": {
+        "enabled": true,
+        "notifyAt": "2024-12-10T10:00:00Z"
+      }
+    },
+    {
+      "id": "saved_002",
+      "userId": "user_demo",
+      "eventId": "evt_002",
+      "notes": "Team up with classmates",
+      "reminder": {
+        "enabled": true,
+        "notifyAt": "2025-01-10T10:00:00Z"
+      }
+    }
+  ]
+}

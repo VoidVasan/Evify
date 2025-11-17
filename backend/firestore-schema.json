@@ -1,0 +1,346 @@
+{
+  "collections": {
+    "events": {
+      "description": "Stores all events available on the platform",
+      "fields": {
+        "title": {
+          "type": "string",
+          "required": true,
+          "description": "Event title"
+        },
+        "description": {
+          "type": "string",
+          "required": true,
+          "description": "Full event description"
+        },
+        "shortDescription": {
+          "type": "string",
+          "required": false,
+          "description": "Brief event summary"
+        },
+        "categoryId": {
+          "type": "reference",
+          "required": true,
+          "description": "Reference to categories collection"
+        },
+        "categoryName": {
+          "type": "string",
+          "required": true,
+          "description": "Category name for quick access"
+        },
+        "location": {
+          "type": "map",
+          "required": true,
+          "fields": {
+            "venue": "string",
+            "city": "string",
+            "country": "string",
+            "coordinates": {
+              "lat": "number",
+              "lng": "number"
+            },
+            "isOnline": "boolean"
+          }
+        },
+        "dates": {
+          "type": "map",
+          "required": true,
+          "fields": {
+            "registrationDeadline": "timestamp",
+            "startDate": "timestamp",
+            "endDate": "timestamp"
+          }
+        },
+        "bannerImage": {
+          "type": "string",
+          "required": false,
+          "description": "URL to event banner image"
+        },
+        "images": {
+          "type": "array",
+          "required": false,
+          "description": "Array of image URLs"
+        },
+        "organizer": {
+          "type": "map",
+          "required": true,
+          "fields": {
+            "name": "string",
+            "email": "string",
+            "website": "string",
+            "contact": "string"
+          }
+        },
+        "eligibility": {
+          "type": "map",
+          "required": true,
+          "fields": {
+            "ageMin": "number",
+            "ageMax": "number",
+            "restrictions": "string"
+          }
+        },
+        "registration": {
+          "type": "map",
+          "required": true,
+          "fields": {
+            "fee": "number",
+            "currency": "string",
+            "isFree": "boolean",
+            "link": "string",
+            "maxParticipants": "number",
+            "currentParticipants": "number"
+          }
+        },
+        "prizes": {
+          "type": "string",
+          "required": false,
+          "description": "Prize information"
+        },
+        "tags": {
+          "type": "array",
+          "required": false,
+          "description": "Event tags for search and filtering"
+        },
+        "status": {
+          "type": "string",
+          "required": true,
+          "enum": ["upcoming", "ongoing", "completed", "cancelled"],
+          "default": "upcoming"
+        },
+        "featured": {
+          "type": "boolean",
+          "required": false,
+          "default": false
+        },
+        "viewCount": {
+          "type": "number",
+          "required": false,
+          "default": 0
+        },
+        "bookmarkCount": {
+          "type": "number",
+          "required": false,
+          "default": 0
+        },
+        "createdAt": {
+          "type": "timestamp",
+          "required": true
+        },
+        "updatedAt": {
+          "type": "timestamp",
+          "required": true
+        }
+      },
+      "indexes": [
+        {
+          "fields": ["categoryId", "createdAt"],
+          "order": "desc"
+        },
+        {
+          "fields": ["status", "dates.startDate"],
+          "order": "asc"
+        },
+        {
+          "fields": ["featured", "createdAt"],
+          "order": "desc"
+        }
+      ]
+    },
+    
+    "users": {
+      "description": "User profiles and preferences",
+      "fields": {
+        "email": {
+          "type": "string",
+          "required": true,
+          "description": "User email address"
+        },
+        "name": {
+          "type": "string",
+          "required": true,
+          "description": "User full name"
+        },
+        "displayName": {
+          "type": "string",
+          "required": false,
+          "description": "Display name"
+        },
+        "avatar": {
+          "type": "string",
+          "required": false,
+          "description": "Avatar URL"
+        },
+        "age": {
+          "type": "number",
+          "required": false,
+          "description": "User age"
+        },
+        "school": {
+          "type": "string",
+          "required": false,
+          "description": "School/Institution name"
+        },
+        "interests": {
+          "type": "array",
+          "required": false,
+          "description": "Array of interest category IDs"
+        },
+        "location": {
+          "type": "map",
+          "required": false,
+          "fields": {
+            "city": "string",
+            "country": "string"
+          }
+        },
+        "preferences": {
+          "type": "map",
+          "required": false,
+          "fields": {
+            "emailNotifications": "boolean",
+            "reminders": "boolean",
+            "newsletter": "boolean"
+          }
+        },
+        "stats": {
+          "type": "map",
+          "required": false,
+          "fields": {
+            "eventsAttended": "number",
+            "eventsSaved": "number",
+            "eventsRegistered": "number"
+          }
+        },
+        "role": {
+          "type": "string",
+          "required": true,
+          "enum": ["student", "organizer", "admin"],
+          "default": "student"
+        },
+        "isVerified": {
+          "type": "boolean",
+          "required": false,
+          "default": false
+        },
+        "createdAt": {
+          "type": "timestamp",
+          "required": true
+        },
+        "updatedAt": {
+          "type": "timestamp",
+          "required": true
+        },
+        "lastLoginAt": {
+          "type": "timestamp",
+          "required": false
+        }
+      }
+    },
+    
+    "saved_events": {
+      "description": "User bookmarks/saved events",
+      "fields": {
+        "userId": {
+          "type": "string",
+          "required": true,
+          "description": "Reference to user ID"
+        },
+        "eventId": {
+          "type": "string",
+          "required": true,
+          "description": "Reference to event ID"
+        },
+        "savedAt": {
+          "type": "timestamp",
+          "required": true,
+          "description": "When the event was saved"
+        },
+        "notes": {
+          "type": "string",
+          "required": false,
+          "description": "User notes about the event"
+        },
+        "reminder": {
+          "type": "map",
+          "required": false,
+          "fields": {
+            "enabled": "boolean",
+            "notifyAt": "timestamp"
+          }
+        }
+      },
+      "indexes": [
+        {
+          "fields": ["userId", "savedAt"],
+          "order": "desc"
+        },
+        {
+          "fields": ["userId", "eventId"],
+          "unique": true
+        }
+      ]
+    },
+    
+    "categories": {
+      "description": "Event categories",
+      "fields": {
+        "name": {
+          "type": "string",
+          "required": true,
+          "description": "Category name"
+        },
+        "slug": {
+          "type": "string",
+          "required": true,
+          "description": "URL-friendly slug"
+        },
+        "description": {
+          "type": "string",
+          "required": false,
+          "description": "Category description"
+        },
+        "icon": {
+          "type": "string",
+          "required": false,
+          "description": "Icon emoji or URL"
+        },
+        "color": {
+          "type": "string",
+          "required": false,
+          "description": "Category color hex code"
+        },
+        "order": {
+          "type": "number",
+          "required": true,
+          "description": "Display order"
+        },
+        "eventCount": {
+          "type": "number",
+          "required": false,
+          "default": 0,
+          "description": "Number of events in category"
+        },
+        "isActive": {
+          "type": "boolean",
+          "required": true,
+          "default": true
+        },
+        "createdAt": {
+          "type": "timestamp",
+          "required": true
+        }
+      },
+      "indexes": [
+        {
+          "fields": ["order"],
+          "order": "asc"
+        },
+        {
+          "fields": ["slug"],
+          "unique": true
+        }
+      ]
+    }
+  }
+}

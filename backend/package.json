@@ -1,0 +1,29 @@
+{
+  "name": "evify-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Evify - Student Event Discovery Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed": "node scripts/seedDatabase.js"
+  },
+  "keywords": [
+    "events",
+    "students",
+    "firebase",
+    "api"
+  ],
+  "author": "Evify Team",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase": "^10.7.1",
+    "firebase-admin": "^12.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
